@@ -1,1 +1,1 @@
-**Restaurent menu app using Django**
+**Restaurant menu app using Django**
