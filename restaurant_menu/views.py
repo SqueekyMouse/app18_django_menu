@@ -1,7 +1,7 @@
 from typing import Any, Dict
 from django.shortcuts import render
 from django.views import generic
-from .models import Item
+from .models import Item, MEAL_TYPE
 
 # Create your views here.
 # gonna create class based view, cleaner approch!!!
@@ -10,9 +10,9 @@ class MenuList(generic.ListView): # for mail page!!
     template_name="index.html"
 
     # context- key concept in django, to connect python data to html!!!
-    def get_context_data(self) -> Dict[str, Any]:
-        context={'meals': ['Pizza', 'Pasta'],
-                 'ingredients':['things']}
+    def get_context_data(self, **kwargs) -> Dict[str, Any]:
+        context=super().get_context_data(**kwargs) # get some default values!!!
+        context['meals']=MEAL_TYPE
         return(context)
 
 class MenuItemDetail(generic.DetailView): # for item page!!
