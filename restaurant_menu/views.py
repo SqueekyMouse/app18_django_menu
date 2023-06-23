@@ -18,3 +18,7 @@ class MenuList(generic.ListView): # for mail page!!
 class MenuItemDetail(generic.DetailView): # for item page!!
     model=Item
     template_name='menu_item_detail.html'
+
+class About(generic.TemplateView):
+    # model=Item
+    template_name='about.html'
