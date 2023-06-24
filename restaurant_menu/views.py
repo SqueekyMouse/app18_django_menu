@@ -5,8 +5,8 @@ from .models import Item, MEAL_TYPE
 
 # Create your views here.
 # gonna create class based view, cleaner approch!!!
-class MenuList(generic.ListView): # for mail page!!
-    queryset=Item.objects.order_by("-date_created")
+class MenuList(generic.ListView): # for main page!!
+    queryset=Item.objects.order_by("-date_created") # rev order of date!!
     template_name="index.html"
 
     # context- key concept in django, to connect python data to html!!!

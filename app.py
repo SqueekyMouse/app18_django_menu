@@ -7,4 +7,4 @@
 # jinja for loop, display data on page
 # jinja if/else cond, item avail in page
 # add dynamic links in items, items page configs
-# nav menue and bootstrap, about page!!!
+# nav menue and bootstrap, about page
